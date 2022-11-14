@@ -63,7 +63,7 @@ class HealiosApi {
     const delay = this.getDelay()
     const error = this.getFailureRate()
 
-    const newNotes = this.notes.map(note => {
+    this.notes = this.notes.map(note => {
       if (note.id === noteId) {
         const newNote = note
         newNote.content = payload.content
